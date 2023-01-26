@@ -1,0 +1,76 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Variables */
+:root {
+  --textcolour: #f1f1f1;
+  --backgroundcolour-dark: #0f2851;
+  --primarycolour: #1280e6;
+  --secondarycolour: #0e3270;
+  --primaryfont: ;
+  --secondaryfont: ;
+}
+
+body{
+  background-color: var(--backgroundcolour-dark);
+  color: aliceblue;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  position: -webkit-sticky;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.nav-list{
+  display: flex;
+  justify-content: center;
+}
+
+.nav-element{
+  display: inline;
+  margin: 10px 20px;
+}
+
+.nav-element .nav-link{
+  color: var(--textcolour);
+}
+
+.login-button{
+  margin: 5px 100px;
+}
+
+.login-button a{
+  background-color: var(--primarycolour);
+  padding: 8px 15px;
+  border-radius: 8px;
+  position: absolute;
+  right: 30px;
+  color: var(--backgroundcolour);
+}
