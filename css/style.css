@@ -26,9 +26,9 @@ html {
 
 /* Variables */
 :root {
-  --textcolour: #f1f1f1;
-  --backgroundcolour-dark: #0f2851;
-  --primarycolour: #1280e6;
+  --whitecolour: #f1f1f1;
+  --backgroundcolour-dark: #081c3e;
+  --primarycolour: #1081e9;
   --secondarycolour: #0e3270;
   --primaryfont: ;
   --secondaryfont: ;
@@ -45,7 +45,7 @@ body{
   position: sticky;
   position: -webkit-sticky;
   font-size: 20px;
-  margin: 10px;
+  margin: 25px 10px;
 }
 
 .nav-list{
@@ -59,7 +59,7 @@ body{
 }
 
 .nav-element .nav-link{
-  color: var(--textcolour);
+  color: var(--whitecolour);
 }
 
 .login-button{
@@ -67,10 +67,72 @@ body{
 }
 
 .login-button a{
-  background-color: var(--primarycolour);
+  background-color: var(--whitecolour);
+  color: #081c3e;
   padding: 8px 15px;
   border-radius: 8px;
   position: absolute;
   right: 30px;
-  color: var(--backgroundcolour);
 }
+
+.landing{
+  height: 100%;
+  width: 100%;
+}
+
+.title{
+  text-align: center;
+  font-size: 80px;
+  margin-top: 200px;
+  margin-left: 20px;
+}
+
+.subheading{
+  text-align: center;
+  margin: 10px;
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.searcharea{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 30%;
+  background-color: #caddff7e;
+  border-radius: 20px;
+}
+
+#searchbar{
+  padding: 10px;
+  width: 100%;
+  margin: 0px 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  caret-color: #081c3e;
+  font-size: 24px;
+  color: var(--whitecolour);
+}
+
+/* #searchbar:hover{
+  box-shadow: 0px 0px 5px 2px  var(--primarycolour);
+} */
+
+.searchbtn{
+  padding: 10px 20px;
+  background-color: var(--whitecolour);
+  border-radius: 12px;
+  color: var(--backgroundcolour-dark);
+  border: none;
+  font-size: 24px;
+  font-family:Arial, Helvetica, sans-serif ;
+  cursor: pointer;
+  font-weight: bold;
+}
+
