@@ -26,7 +26,7 @@ html {
 
 /* Variables */
 :root {
-  --whitecolour: #f1f1f1;
+  --whitecolour: #f8f8f8;
   --backgroundcolour-dark: #081c3e;
   --primarycolour: #1081e9;
   --secondarycolour: #0e3270;
@@ -74,6 +74,10 @@ body{
   position: absolute;
   right: 30px;
 }
+
+/* .mainpage{
+  display: flex;
+} */
 
 .landing{
   height: 100%;
@@ -135,4 +139,49 @@ body{
   cursor: pointer;
   font-weight: bold;
 }
+
+#profile{
+  background-color: var(--whitecolour);
+  color: var(--secondarycolour);
+  width: 300px;
+  float: right;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0px 40px;
+  position:absolute;
+  top: 100px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user-profile{
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.username{
+  font-size: 24px;
+}
+
+.profilepic{
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #0e3270;
+  display: flex;
+}
+
+.profilepic img{
+  width: 40px;
+}
+
+.profile-status{
+  margin: 6px;
+  width: 100%;
+}
+
 

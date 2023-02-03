@@ -1,0 +1,83 @@
+.loginbox{
+ display: flex;
+ justify-content: center;
+ margin-top: 50px;
+}
+
+.loginform{
+    background-color: var(--whitecolour);
+    width: 35vw;
+    border-radius: 10px;
+    padding: 4em;
+    color: #081c3e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.loginform h1{
+    margin: 16px 0px;
+}
+
+.loginform label{
+    font-size: 20px;
+    margin: 6px 0px;
+    font-weight: 500;
+}
+
+.loginform input{
+    padding: 6px;
+    margin: 6px 0px;
+    border-radius: 10px;
+    border: 1px solid #bcbcbc;
+}
+
+/* .login-buttons{
+    display: flex;
+    justify-content: center;
+} */
+
+.login-buttons .loginbtn{
+    padding: 10px 16px;
+    background-color: var(--primarycolour);
+    border: none;
+    border-radius: 10px;
+    margin: 20px 0px;
+    font-size: 16px;
+    color: var(--whitecolour);
+}
+
+.login-buttons .forgotbtn{
+    padding: 10px 16px;
+    background-color: var(--whitecolour);
+    border: none;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 16px;
+    color: var(--primarycolour);
+    border: var(--primarycolour) 3px solid;
+}
+
+.create-acc{
+    text-align: center;
+    height: auto;
+}
+
+.create-acc h4{
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.newacc{
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primarycolour);
+    padding: 3px;
+}
+
+.newacc:hover{
+    border-bottom: var(--primarycolour) 2px solid;
+
+}

@@ -34,24 +34,41 @@
       </div>
       
     </div>
-    <div class="landing">
 
+    <div class="mainpage">
       <!-- Header -->
+      <div class="landing">
+        <!-- headline -->
+        <h1 class="title">I want to be...</h1>
+        <!-- Call to action -->
+        <form action="/php/search.php" method="post" class="search">
+          <div class="searcharea">
+            <input type="text" name="query" id="searchbar">
+            <button type="submit" class="searchbtn"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+          </form>
+        <!-- sub-headline -->
+        <h4 class="subheading">Search for anything you want to be!</h4>
+      </div>
       
-      <!-- headline -->
-      <h1 class="title">I want to be...</h1>
-
-      <!-- Call to action -->
-      <form action="/php/search.php" method="post" class="search">
-        <div class="searcharea">
-          <input type="text" name="query" id="searchbar">
-          <button type="submit" class="searchbtn"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="profile" id="profile">
+        <div class="user-profile">
+          <div class="profilepic"><img src="/profilepics/Default_pfp.png" alt="Default_pfp"></div>
+          <h4 class="username">Jane Doe</h4>
         </div>
-        </form>
 
-      <!-- sub-headline -->
-      <h4 class="subheading">Search for anything you want to be!</h4>
+        <div class="profile-status" id="status">
+          <h5>Currently studying B.Sc CS from Mumbai University</h5>
+        </div>
+
+        <div class="profile-description">
+          <h6 class="descrition-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores in facilis alias laborum quia, eos voluptates obcaecati.</h6>
+          <div class="edit-description"></div>
+        </div>
+      </div>
+
     </div>
+
       
     <!-- items/display -->
 
