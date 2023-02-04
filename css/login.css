@@ -17,7 +17,7 @@
 }
 
 .loginform h1{
-    margin: 16px 0px;
+    margin: 20px 0px;
 }
 
 .loginform label{
@@ -83,5 +83,38 @@
 
 .newacc:hover{
     border-bottom: var(--primarycolour) 2px solid;
+}
 
+.selectpfp img{
+    width: 80px;
+}
+
+.selectpfp{
+    display: flex;
+    margin: 5px 0px;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.pfp{
+    margin: 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 20px;
+    width: 80px;
+}
+
+.pfp i{
+    display: none;
+    position: absolute;
+    font-size: 24px;
+    padding: 30px;
+    background-color: var(--whitecolour);
+    opacity: 0.8;
+}
+
+.pfp:hover i{
+    display: block;
 }

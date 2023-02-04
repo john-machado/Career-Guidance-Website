@@ -30,6 +30,7 @@ html {
   --backgroundcolour-dark: #081c3e;
   --primarycolour: #1081e9;
   --secondarycolour: #0e3270;
+  --lightborder:#dbdbdb;
   --primaryfont: ;
   --secondaryfont: ;
 }
@@ -122,6 +123,7 @@ body{
   caret-color: #081c3e;
   font-size: 24px;
   color: var(--whitecolour);
+  caret-color: var(--whitecolour);
 }
 
 /* #searchbar:hover{
@@ -143,9 +145,9 @@ body{
 #profile{
   background-color: var(--whitecolour);
   color: var(--secondarycolour);
-  width: 300px;
+  width: 350px;
   float: right;
-  border-radius: 10px;
+  border-radius: 16px;
   padding: 20px;
   margin: 0px 40px;
   position:absolute;
@@ -157,35 +159,48 @@ body{
   flex-direction: column;
 }
 
+#profile *{
+  margin: 6px 0px;
+}
+
 .user-profile{
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
   align-items: center;
+  padding: 10px;
 }
 
 .username{
-  font-size: 24px;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .profilepic{
   margin-right: 10px;
   border-radius: 50%;
-  background-color: #0e3270;
   display: flex;
 }
 
 .profilepic img{
-  width: 40px;
+  width: 90px;
 }
 
 .profile-status{
   margin: 6px;
   width: 100%;
   color: var(--primarycolour);
+  font-size: 20px;
+  border: var(--lightborder) 1px solid;
+  border-radius: 16px;
+  padding: 10px;
 }
 
 .descrition-text{
   color: #3b424d;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 16px;
+  border: var(--lightborder) solid 1px;
 }
 
