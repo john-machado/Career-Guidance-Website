@@ -3,14 +3,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Css -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive-style.css">
-    <link rel="stylesheet" href="css/login.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Create Account</title>
 </head>
 <body>
-  <!-- Navbar -->
+    <!-- Navbar -->
     <div id="navbar">
 
         <ul class="nav-list">
@@ -26,23 +24,25 @@
         
       </div>
 
-    <div class="loginbox">
-        <form method="post" action="/php/login.php" class="loginform">
-            <h1>Login to your account</h1>
+      <div class="loginbox">
+        <form action="/php/createacc.php" method="post" class="loginform">
+            <h1>Create Account</h1>
             <label for="username">Username</label>
-            <input type="text" name="username" id="username" class="login-input">
+            <input type="text" name="username" id="username">
             <label for="password">Password</label>
             <input type="password" name="password" id="password">
+            <label for="confirm">Confirm password</label>
+            <input type="password" name="confirm" id="confirm">
             <div class="login-buttons">
-              <button type="submit" class="loginbtn" value="login">Login</button>
-              <button name="forgot" value="forgot" class="forgotbtn">Forgot password</button>
+                <button type="submit" class="loginbtn" value="create">Sign Up</button>
             </div>
-
+        
             <div class="create-acc">
-              <h4 class="new-account">Dont have an account?</h4>
-              <a href="createacc.html" class="newacc">Create new account</a>
-            </div>
+                <h4 class="new-account">Already have an account?</h4>
+                <a href="login.html" class="newacc">Login</a>
+              </div>
         </form>
-    </div>
+      </div>
+
 </body>
 </html>

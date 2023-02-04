@@ -182,6 +182,10 @@ body{
 .profile-status{
   margin: 6px;
   width: 100%;
+  color: var(--primarycolour);
 }
 
+.descrition-text{
+  color: #3b424d;
+}
 
