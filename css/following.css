@@ -1,0 +1,77 @@
+.main-social{
+    margin:40px 20px;
+    color: var(--whitecolour);
+}
+
+.social-nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    background-color: var(--secondarycolour);
+    margin: 20px 0px 0px 0px;
+    padding: 30px 0px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.social-nav ul a{
+    color: var(--whitecolour);
+    margin: 20px;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.active-social{
+    border-bottom: solid 2px var(--whitecolour);
+}
+
+.social-list{
+    background-color: var(--whitecolour);
+    border-radius: 0px 0px 20px 20px;
+    padding: 20px 0px;
+}
+
+.social-list-element{
+    margin: 14px 20px;
+    padding: 10px 20px;
+    border: 1px solid var(--secondarycolour); 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.social-list-element *{
+    color: var(--secondarycolour);
+}
+
+.name{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.username{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.status{
+    font-size: 20px;
+}
+
+.social-element-left{
+    width: 80%;
+}
+
+.social-element-right{
+    position:absolute;
+    right: 4em;
+}
+
+.remove{
+    background-color: var(--secondarycolour);
+    border: none;
+    padding: 10px;
+    color: var(--whitecolour);
+    font-size: 16px;
+    border-radius: 6px;
+}

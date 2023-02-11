@@ -1,15 +1,15 @@
 .loginbox{
  display: flex;
  justify-content: center;
- margin-top: 50px;
+ margin: 10px 0px;
 }
 
 .loginform{
     background-color: var(--whitecolour);
     width: 600px;
     border-radius: 10px;
-    padding: 4em;
-    color: #081c3e;
+    padding: 3em 4em;
+    color: var(--secondarycolour);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +22,7 @@
 
 .loginform label{
     font-size: 20px;
-    margin: 6px 0px;
+    margin: 8px 0px;
     font-weight: 500;
 }
 
@@ -31,6 +31,7 @@
     margin: 6px 0px;
     border-radius: 10px;
     border: 1px solid #bcbcbc;
+    font-size: 20px;
 }
 
 .loginform h1{
@@ -48,7 +49,7 @@
     border: none;
     border-radius: 10px;
     margin: 20px 0px;
-    font-size: 16px;
+    font-size: 20px;
     color: var(--whitecolour);
 }
 
@@ -85,7 +86,7 @@
     border-bottom: var(--primarycolour) 2px solid;
 }
 
-.selectpfp img{
+/* .selectpfp img{
     width: 80px;
 }
 
@@ -117,5 +118,13 @@
 
 .pfp:hover i{
     display: block;
+} */
+
+.name{
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
+.name input{
+    margin: 0px 3px;
+}

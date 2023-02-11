@@ -17,7 +17,7 @@
         <ul class="nav-list">
           <li class="nav-element"><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-element"><a href="#" class="nav-link">About</a></li>
-          <li class="nav-element"><a href="#" class="nav-link">Social</a></li>
+          <li class="nav-element"><a href="following.php" class="nav-link">Social</a></li>
         </ul>
   
         <div class="login-button">
@@ -27,7 +27,7 @@
       </div>
 
       <div class="loginbox">
-        <form action="/php/createacc.php" method="post" class="loginform">
+        <form action="createacc.php" method="post" class="loginform">
             <h1>Create Account</h1>
 
             <!-- <div class="selectpfp">
@@ -37,9 +37,14 @@
                     <img src="C:\xampp\htdocs\Default_pfp.png" alt="pfp">
                 </div>
             </div> -->
-
             <label for="username">Username</label>
             <input type="text" name="username" id="username">
+            <div class="name">
+              <label for="firstname">Fist Name</label>
+              <label for="lastname">Last Name</label>
+              <input type="text" name="fname" id="fname">
+              <input type="text" name="lname" id="lname">
+            </div>
             <label for="password">Password</label>
             <input type="password" name="password" id="password">
             <label for="confirm">Confirm password</label>
