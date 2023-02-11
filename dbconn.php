@@ -1,9 +1,9 @@
 <?php
     $dbhost="localhost";  
-    $dbName="test";  
+    $dbName="careerguidance";  
     $user="root";  
     $pass="";
-    $conn = mysqli_connect($dbhost,$user,$pass,$dbName);
+    $connect = mysqli_connect($dbhost,$user,$pass,$dbName);
 	 try{  
         echo "<script> console.log('Successfully connected');</script>";
     }  

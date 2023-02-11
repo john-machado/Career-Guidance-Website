@@ -128,3 +128,8 @@
 .name input{
     margin: 0px 3px;
 }
+
+.error{
+    font-size: 16px !important;
+    color: red !important;
+}
