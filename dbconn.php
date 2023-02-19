@@ -1,13 +1,13 @@
 <?php
     $dbhost="localhost";  
-    $dbName="test";  
+    $dbName="careerguidance";  
     $user="root";  
-    $pass="password";
+    $pass="";
     $connect = mysqli_connect($dbhost,$user,$pass,$dbName);
 	 try{  
         echo "<script> console.log('Successfully connected');</script>";
     }  
     catch(Exception $e){  
-            die("Connection failed".$e->getMessage());  
+        die("Connection failed".$e->getMessage());  
     }
 ?>
