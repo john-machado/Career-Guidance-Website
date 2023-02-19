@@ -13,8 +13,7 @@ echo $password .'<br>';
 echo $confirm .'<br>';
 
 $sql="SELECT username from users";
-echo $sql . '<br>';
-$connect = mysqli_connect($dbhost,$user,$pass,$dbName);
+// echo $sql . '<br>';
 $result = $connect->query($sql);
 $fetched = $result->fetch_assoc();
 
@@ -27,14 +26,14 @@ foreach ($fetched as $key=>$item){
     }
 }
 // CREATE TABLE `careerguidance`.`users` ( `userid` INT NOT NULL , `username` VARCHAR(30) NOT NULL , `password` VARCHAR(30) NOT NULL , `board` VARCHAR(100) NOT NULL , `jrcollege` VARCHAR(100) NOT NULL , `degree` VARCHAR(100) NOT NULL , `masters` VARCHAR(100) NOT NULL , `additional` VARCHAR(100) NOT NULL , `admin` BOOLEAN NOT NULL , PRIMARY KEY (`userid`)) ENGINE = InnoDB;
-function checkAdmin(){
-    if ($admin=='1') {
-        return true;
-    } else {
-        return false;
-    }
+// function checkAdmin(){
+//     if ($admin=='1') {
+//         return true;
+//     } else {
+//         return false;
+//     }
 
-}
+// }
 
 
 ?>
