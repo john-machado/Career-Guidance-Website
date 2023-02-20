@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,41 +43,14 @@
       </div>
 
       <div class="loginbox">
-        <form action="createacc.php" method="post" class="loginform" onsubmit="return verifyPassword()">
-            <h1>Create Account</h1>
-
-            <!-- <div class="selectpfp">
-                <label for="pfp">Change avatar</label>
-                <div class="pfp">
-                    <i class="fa-solid fa-repeat"></i>
-                    <img src="C:\xampp\htdocs\Default_pfp.png" alt="pfp">
-                </div>
-            </div> -->
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" required>
-            <div class="name">
-              <label for="firstname">First Name</label>
-              <label for="lastname">Last Name</label>
-              <input type="text" name="fname" id="fname" required>
-              <input type="text" name="lname" id="lname" required>
-            </div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" minlength="8" required>
-            <label for="confirm">Confirm password</label>
-            <input type="password" name="confirm" id="confirm" minlength="8" required>
-            <label for="error" id="message" class="error"></label>
-            <div class="login-buttons">
-                <button type="submit" class="loginbtn" value="create">Sign Up</button>
-            </div>
-        
+        <form action="createaccusername.php" method="post" class="loginform" onsubmit="return verifyPassword()">
+            <h1 style="text-align:center;">You have not logged into an account.</h1>
             <div class="create-acc">
                 <h4 class="new-account">Already have an account?</h4>
                 <a href="login.html" class="newacc">Login</a>
-              </div>
+            </div>
         </form>
       </div>
 
 </body>
 </html>
-
-<a href="createacc.html">This username is already taken.</a>

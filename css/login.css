@@ -48,9 +48,9 @@
     font-size: 20px;
 }
 
-.loginform .select{
+/* .loginform .select{
   
-}
+} */
 
 .loginform h1{
     font-size: 50px;
@@ -64,6 +64,16 @@
 .login-buttons .loginbtn{
     padding: 10px 16px;
     background-color: var(--primarycolour);
+    border: none;
+    border-radius: 10px;
+    margin: 20px 0px;
+    font-size: 20px;
+    color: var(--whitecolour);
+}
+
+.login-buttons .logoutbtn{
+    padding: 10px 16px;
+    background-color: rgb(244, 94, 94);
     border: none;
     border-radius: 10px;
     margin: 20px 0px;

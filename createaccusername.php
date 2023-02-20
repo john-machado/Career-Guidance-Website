@@ -1,3 +1,77 @@
+<?php
+    include 'dbconn.php';
+    $_SESSION["created"] = false;
+            
+    $_SESSION["errormsg"] = "";
+    $_SESSION["error"]="";
+
+    $username =$_POST["username"];
+    $password =$_POST["password"];
+    $confirm =$_POST["confirm"];
+    $fname =$_POST["fname"];
+    $lname =$_POST["lname"];
+    
+    $sql="SELECT username from users";
+    // echo $sql . '<br>';
+    $result = $connect->query($sql);
+    $fetched = $result->fetch_assoc();
+    
+    // $msg =" ";
+    foreach ($fetched as $key=>$item){
+        if ($username===$item) {
+            $_SESSION["error"] = "username";
+           
+        }
+        else {
+        $_SESSION["created"] = true;
+        setcookie("login",true);
+        header ('Location:myaccount.php');
+        echo '<script type="text/javascript">
+                  alert("Account created");
+                </script>';
+        
+          }
+
+    }
+
+
+    setcookie("username",$username);
+    setcookie("password",$password);
+    setcookie("fname",$fname);
+    setcookie("lname",$lname);
+
+
+
+    // $_COOKIE["username"]=$username;
+    // $_COOKIE["password"]=$password;
+    // $_COOKIE["fname"]=$fname;
+    // $_COOKIE["lname"]=$lname;
+
+
+
+    
+
+    // echo $username .'<br>';
+    // echo $password .'<br>'; 
+    // echo $confirm .'<br>';
+    
+
+
+?>
+
+<?php
+
+if ($_SESSION["error"]=="") {
+    $_SESSION["errormsg"] = "";
+}
+elseif ($_SESSION["error"]=="username"){
+    $_SESSION["errormsg"] = "Username is taken";
+}
+
+// header('Location: createacc.html');
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,7 +116,7 @@
       </div>
 
       <div class="loginbox">
-        <form action="createacc.php" method="post" class="loginform" onsubmit="return verifyPassword()">
+        <form action="createaccusername.php" method="post" class="loginform" onsubmit="return verifyPassword()">
             <h1>Create Account</h1>
 
             <!-- <div class="selectpfp">
@@ -53,18 +127,20 @@
                 </div>
             </div> -->
             <label for="username">Username</label>
-            <input type="text" name="username" id="username" required>
+            <input type="text" name="username" id="username" value="<?php echo $username; ?>" required>
             <div class="name">
               <label for="firstname">First Name</label>
               <label for="lastname">Last Name</label>
-              <input type="text" name="fname" id="fname" required>
-              <input type="text" name="lname" id="lname" required>
+              <input type="text" name="fname" id="fname" value="<?php echo $fname; ?>">
+              <input type="text" name="lname" id="lname" value="<?php echo $lname; ?>">
             </div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" minlength="8" required>
+            <label for="password" >Password</label>
+            <input type="password" name="password" id="password" minlength="8" value="<?php echo $password; ?>">
             <label for="confirm">Confirm password</label>
-            <input type="password" name="confirm" id="confirm" minlength="8" required>
-            <label for="error" id="message" class="error"></label>
+            <input type="password" name="confirm" id="confirm" minlength="8" value="<?php echo $password; ?>">
+            <label for="error" id="message" class="error">
+                <?php echo $_SESSION["errormsg"]; ?>
+            </label>
             <div class="login-buttons">
                 <button type="submit" class="loginbtn" value="create">Sign Up</button>
             </div>
@@ -79,4 +155,6 @@
 </body>
 </html>
 
-<a href="createacc.html">This username is already taken.</a>
+
+
+
