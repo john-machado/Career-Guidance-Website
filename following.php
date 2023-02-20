@@ -31,7 +31,7 @@
         <div class="social-nav">
           <ul>
             <li><a href="following.php" class="active-social">Following</a></li>
-            <li><a href="groups.php">Groups</a></li>
+            <!-- <li><a href="groups.php">Groups</a></li> -->
           </ul>
         </div>
 

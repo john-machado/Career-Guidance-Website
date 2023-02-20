@@ -39,8 +39,8 @@
             </div>
             <label for="profession">Profession</label>
             <input type="text" name="profession">
-            <label for="board">Highschool board</label>
-            <input type="text" name="board">
+            <!-- <label for="board">Highschool board</label>
+            <input type="text" name="board"> -->
             <label for="jnrcollege">Junior College or Diploma</label>
             <input type="text" name="jnrcollege">
             <label for="degree">Degree</label>
