@@ -24,7 +24,6 @@
         else {
         $_SESSION["created"] = true;
         setcookie("login",true);
-        header ('Location:myaccount.php');
         echo '<script type="text/javascript">
                   alert("Account created");
                 </script>';
@@ -33,6 +32,8 @@
 
           if ($connect->query($sql) === TRUE) {
             echo "New record created successfully";
+            header ('Location:myaccount.php');
+
           } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
           }

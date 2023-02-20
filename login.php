@@ -23,13 +23,16 @@ $result = $connect->query($sql);
 
 $row = $result->fetch_assoc();
 
-if ($password == $row["password"]) {
+if ($password == $row["password"] and $row["admin"] =='0') {
     setcookie("username",$username);
     setcookie("password",$password);
     setcookie("fname",$row["fname"]);
     setcookie("lname",$row["lname"]);
     setcookie("login",true);
     header('Location: index.html');
+}
+elseif($password == $row["password"] and $row["admin"] == '1'){
+    header('Location: admin.php');
 }
 else{
     include_once 'login.html';

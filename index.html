@@ -17,6 +17,7 @@
     <!-- Roboto font -->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
+
 </head>
   <body>
     <!-- Navbar -->
@@ -29,7 +30,8 @@
       </ul>
 
       <div class="login-button">
-        <a href="createacc.php">Sign Up</a>
+        <a href="myaccount.php" id="myacc">My Account</a>
+        <a href="login.html" id="login">Login</a>
       </div>
       
     </div>
@@ -52,20 +54,23 @@
 
     </div>
 
+    <script type="text/javaScript">
+      if (document.cookie !== "") {
+          console.log("no cookie");
+          // Hide login
+          var login = document.getElementById("login");
+          login.style.display="none"
+      }
+      else{
+        var myacc = document.getElementById("myacc");
+        myacc.style.display="none"
+      }
+    </script>
       
-    <!-- items/display -->
-
-    <!-- Featured highlights -->
-
-    <!-- Trust indicators/testimonials -->
 
     <!-- Footer -->
 
-      <!-- Related useful content -->
 
-      <!-- Company updates -->
-
-      <!-- Offers -->
 
 
     <!-- Bootstrap JavaScript Libraries -->
