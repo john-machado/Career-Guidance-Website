@@ -20,7 +20,6 @@
     foreach ($fetched as $key=>$item){
         if ($username===$item) {
             $_SESSION["error"] = "username";
-           
         }
         else {
         $_SESSION["created"] = true;
@@ -30,7 +29,15 @@
                   alert("Account created");
                 </script>';
         
+          $sql = "INSERT INTO users (username, password, fname, lname) VALUES ('".$username."',"."'".$password."',"."'".$fname."',"."'".$lname."') ";
+
+          if ($connect->query($sql) === TRUE) {
+            echo "New record created successfully";
+          } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
           }
+      
+        }
 
     }
 
@@ -54,7 +61,8 @@
     // echo $username .'<br>';
     // echo $password .'<br>'; 
     // echo $confirm .'<br>';
-    
+    // $sql= "INSERT INTO users (username, password, fname, lname) VALUES ('".$username."'".$password."'".$fname."'".$lname."') ";
+    // $result = $connect->query($sql);
 
 
 ?>
