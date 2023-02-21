@@ -1,4 +1,6 @@
-#SQL for users db
+#DB name careerguidance
+
+#SQL for users 
 
 CREATE TABLE `careerguidance`.`users` ( `userid` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(20) NOT NULL , `password` VARCHAR(20) NOT NULL , `juniorcollege` VARCHAR(50) NOT NULL , `degree` VARCHAR(50) NOT NULL , `masters` VARCHAR(50) NOT NULL , `other` VARCHAR(50) NOT NULL , `admin` BOOLEAN NOT NULL , PRIMARY KEY (`userid`)) ENGINE = InnoDB;
 
