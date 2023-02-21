@@ -30,8 +30,8 @@
     
     $sql = "UPDATE users SET profession = '".$prof."', juniorcollege ='".$jnrclg."' ,degree='".$degree."' ,masters='".$masters."' , other= '".$other."' WHERE username='".$_COOKIE["username"]."'";
     $result = $connect->query($sql);
-    $row = $result->fetch_assoc();
-    // header ('Location:myaccount.php');
+    // $row = $result->fetch_assoc();
+    header ('Location:myaccount.php');
     $loginmsg="You are currently logged in as " . $_COOKIE["username"];
 
   }
@@ -65,9 +65,9 @@
           <li class="nav-element"><a href="following.php" class="nav-link">Social</a></li>
         </ul>
   
-        <div class="login-button">
+        <!-- <div class="login-button">
           <a href="createacc.php">Sign Up</a>
-        </div>
+        </div> -->
         
       </div>
 
