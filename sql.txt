@@ -5,3 +5,24 @@ CREATE TABLE `careerguidance`.`users` ( `userid` INT NOT NULL AUTO_INCREMENT , `
 #Add admin 
 
 INSERT INTO `users`(`userid`, `username`, `password`, `admin`) VALUES ('1','admin','admin',true);
+
+#Social
+
+CREATE TABLE `social` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `follower` varchar(30) NOT NULL,
+  `following` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4
+
+#career
+
+CREATE TABLE `career` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `juniorcollege` varchar(30) NOT NULL,
+  `degree` varchar(50) NOT NULL,
+  `masters` varchar(50) NOT NULL,
+  `other` varchar(50) NOT NULL,
+  `similar` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4

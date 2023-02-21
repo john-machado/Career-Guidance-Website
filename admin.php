@@ -13,6 +13,23 @@ include 'dbconn.php';
 //     echo "Error: " . $sql . "<br>" . $connect->error;
 // }
 
+  $profession = $_POST["career"];
+  $jnrclg = $_POST["jnrcollege"];
+  $degree = $_POST["degree"];
+  $masters = $_POST["masters"];
+  $courses = $_POST["course"];
+  $similar = $_POST["similar"];
+  
+
+  $sql = "INSERT INTO career (career,juniorcollege,degree,masters,other,similar) VALUES ('".$profession."','".$jnrclg."','".$degree."','".$masters."','".$courses."','".$similar."')";
+  $result = $connect->query($sql);
+  if ($result=== TRUE) {
+    echo "New record created successfully";
+  } else {
+    echo "Error";
+  }
+  
+
 if($_COOKIE["admin"]==true){
 ?>
 
@@ -49,9 +66,11 @@ if($_COOKIE["admin"]==true){
       <div class="loginbox" style="justify-content:flex-start;margin-left:40px;">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="loginform" onsubmit="return verifyPassword()">
             <h2>Enter data to search database</h2>
+            <label for="career">Profession</label>
+            <input type="text" name="career" autofocus>
             <label for="jnrcollege">Junior College Field</label>
             <div class="select">
-                <select name="jnrcollege" id="jnrclg" autofocus>
+                <select name="jnrcollege" id="jnrclg">
                     <option value="science">Science</option>
                     <option value="arts">Arts</option>
                     <option value="commerce">Commerce</option>
@@ -62,7 +81,7 @@ if($_COOKIE["admin"]==true){
             <input type="text" name="degree">
             <label for="masters">Masters</label>
             <input type="text" name="masters">
-            <label for="courses">Other courses</label>
+            <label for="course">Other courses</label>
             <input type="text" name="course">
             <label for="similar">Similar courses</label>
             <input type="text" name="similar">

@@ -1,4 +1,10 @@
 <?php 
+    include 'dbconn.php';
+    $query =$_POST["query"];
+    echo $query;
+    $sql = "SELECT * FROM career WHERE career='".$query."'";
+    $result = $connect->query($sql);
+    $row = $result->fetch_assoc();
 ?>
 
 <html lang="en">
@@ -41,32 +47,46 @@
 
     <div class="searchresults">
 
+<?php 
+    if ($result !== false && $result->num_rows > 0){
+?>
+
         <div class="level1 resultbox">
             <h1>Junior College</h1>
-            <h4>Lorem ipsum</h4>
+            <h2><?php echo $row["juniorcollege"] ?></h2>
         </div>
 
         <div class="level2 resultbox">
             <h1>Bachelors Degree/Diploma</h1>
-            <h4>Lorem ipsum</h4>
+            <h2><?php echo $row["degree"] ?></h2>
         </div>
 
         <div class="level3 resultbox">
             <h1>Masters Degree</h1>
-            <h4>Lorem ipsum</h4>
+            <h2><?php echo $row["masters"] ?></h2>
         </div>
 
         <div class="level4 resultbox">
             <h1>Relevent courses</h1>
-            <h4>Lorem ipsum</h4>
+            <h2><?php echo $row["other"] ?></h2>
         </div>
 
         <div class="recommend">
-            <h4>You might also be interested in</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <h2>You might also be interested in <br> <?php echo $row["similar"] ?></h2>
+            <p></p>
         </div>
+
+<?php        
+    } else {
+      echo "<div class='level4 resultbox'>
+              <h1>Currently no results available</h1>
+            </div>";
+    }
+?>
     </div>
 
+    <br>
+    <br>
 </body>
 </html>
 
