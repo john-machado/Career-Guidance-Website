@@ -75,3 +75,27 @@
     font-size: 16px;
     border-radius: 6px;
 }
+
+.searchbar{
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+    background-color: #caddff7e;
+    border-radius: 20px;
+    position: absolute;
+    right: 50px;
+}
+
+#searchuser{
+    padding: 10px;
+    width: 100%;
+    margin: 0px 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    caret-color: #081c3e;
+    font-size: 24px;
+    color: var(--whitecolour);
+    caret-color: var(--whitecolour);
+}

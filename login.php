@@ -28,11 +28,18 @@ if ($password == $row["password"] and $row["admin"] =='0') {
     setcookie("password",$password);
     setcookie("fname",$row["fname"]);
     setcookie("lname",$row["lname"]);
+    setcookie("prof",$row["profession"]);
     setcookie("login",true);
     header('Location: index.html');
 }
 elseif($password == $row["password"] and $row["admin"] == '1'){
     header('Location: admin.php');
+    setcookie("admin",true);
+    setcookie("username",$username);
+    setcookie("password",$password);
+    setcookie("fname",'admin');
+    setcookie("lname",'admin');
+    setcookie("login",true);
 }
 else{
     include_once 'login.html';

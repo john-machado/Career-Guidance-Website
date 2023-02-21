@@ -1,4 +1,11 @@
 <?php
+  include_once 'dbconn.php';
+  $sql= "SELECT profession, juniorcollege, degree, masters, other  from users WHERE username='".$_COOKIE["username"]."'";
+  $result = $connect->query($sql);
+  
+  $row = $result->fetch_assoc();
+  
+
   if($_COOKIE["login"]==false){
     header("Location: nologin.php");
   }
@@ -9,11 +16,28 @@
     setcookie("fname", "", time()-3600);
     setcookie("lname", "", time()-3600);
     setcookie("login", false, time()-3600);
+    setcookie("admin",false,time()-3600);
     header("Location:index.html");
     $loginmsg = "You are not signed in";
   }
+  elseif (isset($_POST['save'])) {
+
+    $prof = $_POST["profession"];
+    $jnrclg = $_POST["jnrcollege"];
+    $degree = $_POST["degree"];
+    $masters = $_POST["masters"];
+    $other = $_POST["other"];
+    
+    $sql = "UPDATE users SET profession = '".$prof."', juniorcollege ='".$jnrclg."' ,degree='".$degree."' ,masters='".$masters."' , other= '".$other."' WHERE username='".$_COOKIE["username"]."'";
+    $result = $connect->query($sql);
+    $row = $result->fetch_assoc();
+    // header ('Location:myaccount.php');
+    $loginmsg="You are currently logged in as " . $_COOKIE["username"];
+
+  }
   else{
     $loginmsg="You are currently logged in as " . $_COOKIE["username"];
+
   }
 
   
@@ -60,16 +84,18 @@
                 <input type="text" name="fname" id="fname" value="<?php echo $_COOKIE["fname"];?>" required readonly disabled>
                 <input type="text" name="lname" id="lname" value="<?php echo $_COOKIE["lname"];?>" required readonly disabled>
             </div>
-            <label for="profession">Profession</label>
-            <input type="text" name="profession">
+            <label for="profession">Pursuing Profession</label>
+            <input type="text" name="profession" value="<?php echo $row["profession"];?>">
             <!-- <label for="board">Highschool board</label>
             <input type="text" name="board"> -->
             <label for="jnrcollege">Junior College or Diploma</label>
-            <input type="text" name="jnrcollege">
+            <input type="text" name="jnrcollege" value="<?php echo $row["juniorcollege"];?>">
             <label for="degree">Degree</label>
-            <input type="text" name="degree">
+            <input type="text" name="degree" value="<?php echo $row["degree"];?>">
+            <label for="masters" >Masters</label>
+            <input type="text" name="masters" value="<?php echo $row["masters"];?>">
             <label for="other">Other courses</label>
-            <input type="text" name="other">
+            <input type="text" name="other" value="<?php echo $row["other"];?>">
             <div class="login-buttons" style="display:flex; justify-content:center; align-items:center">
                 <button type="submit" class="loginbtn" name="save" value="Save" style="margin:10px 20px;">Save</button>
                 <button type="submit" class="logoutbtn" name="logout" value="Logout">Logout</button>

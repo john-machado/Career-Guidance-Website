@@ -12,7 +12,10 @@ include 'dbconn.php';
 // } else {
 //     echo "Error: " . $sql . "<br>" . $connect->error;
 // }
+
+if($_COOKIE["admin"]==true){
 ?>
+
 
 <html lang="en">
 <head>
@@ -43,7 +46,7 @@ include 'dbconn.php';
         
       </div>
 
-      <div class="loginbox" style="justify-content:flex-start;margin-left:20px;">
+      <div class="loginbox" style="justify-content:flex-start;margin-left:40px;">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="loginform" onsubmit="return verifyPassword()">
             <h2>Enter data to search database</h2>
             <label for="jnrcollege">Junior College Field</label>
@@ -63,11 +66,32 @@ include 'dbconn.php';
             <input type="text" name="course">
             <label for="similar">Similar courses</label>
             <input type="text" name="similar">
-        <div class="login-buttons">
-            <button type="submit" class="loginbtn">Save</button>
-        </div>
+
+            <div class="login-buttons">
+                <button type="submit" class="loginbtn" name="save" value="Save">Save</button>
+                <button type="submit" class="logoutbtn" name="logout" value="Logout">Logout</button>
+            </div>
         </form>
+        
       </div>
 
 </body>
 </html>
+
+<?php
+
+}
+else{
+  header("Location: index.html");
+}
+
+if(isset($_POST['logout'])) {
+  setcookie("username", "", time()-3600);
+  setcookie("password", "", time()-3600);
+  setcookie("fname", "", time()-3600);
+  setcookie("lname", "", time()-3600);
+  setcookie("login", false, time()-3600);
+  setcookie("admin",false,time()-3600);
+  header("Location:index.html");
+}
+?>
